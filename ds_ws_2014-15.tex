@@ -1,0 +1,119 @@
+\documentclass[10pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{MnSymbol}
+\usepackage{fancyhdr}
+\author{Patrick Kalmbach}
+\newcommand{\pdfauthor}{Patrick Kalmbach}
+\newcommand{\matrikelnummer}{Mtrk-Nr: 03659077}
+\newcommand{\fach}{Diskrete Strukturen}
+\newcommand{\semester}{Wintersemester 2014/2015}
+\newcommand{\doctype}{Homework 1}
+\newcommand{\finishdate}{17.10.2014}
+
+\pagestyle{fancy}
+\setlength{\headheight}{2.5em}
+\lhead{\pdfauthor\linebreak\matrikelnummer}
+\rhead{\fach\linebreak\semester}
+\chead{\doctype\linebreak\finishdate}
+\lfoot{}
+\rfoot{}
+\cfoot{\thepage}
+
+
+\begin{document}
+\noindent
+\section{Homework 1}
+\subsection{Exercise 1}
+\begin{enumerate}
+\item Der Minuend ist der Ausdruck, der vermindert wird $\rightarrow (x+y)$ is Minuend
+\item Gültige arithmetische Ausdrücke:
+	\begin{itemize}
+		\item $x+2$
+		\item $+1+2x$ Dieser Ausdruck ist nur dann gültig, wenn es sich bei dem $+$ um ein Vorzeichen und nicht um eine Operation handelt
+		\item $(-12x)\cdot x$
+		\item $x-y+2$
+	\end{itemize}
+\item
+	\begin{itemize}
+		\item $(2+3):(4-4)$ Der Ausduck ist zwar ein Quotient, jedoch ungültig da Division durch Null
+	\end{itemize}
+	\item Unteschiedliche Auswertungsvorschriften des Ausdrucks $2+3:4-4$:
+	\begin{itemize}	
+		\item $2+3:4-4=-1.25$
+		\item $(2+3):4-4 = -2.75$
+		\item $2+3:(4-4) = undef$
+		\item $(2+3):(4-4) = undef$
+		\item $(2+3:4)-4 = -1.25$
+		\item $2+(3:4-4) = -1.25$
+	\end{itemize}
+	\item Folgendes sind (arithmetische) (Teil-) Ausdrücke:
+		\begin{itemize}
+			\item Differenz
+			\item Multiplikator
+			\item Divident
+			\item Bruch
+		\end{itemize}
+\end{enumerate}
+
+\subsection{Exercise 2}
+Menge aller geraden Zahlen: $A:=\lbrace 2n\mid n\in\mathbb{Z}\rbrace$
+
+Menge aller ungeraden Zahlen: $B:=\lbrace 2n\mid n\in\mathbb{Z}\rbrace$
+
+Assuming: $\exists x\in A \wedge\in B$ then:
+\begin{equation*}
+\begin{split}
+	2a = 2b+1\qquad\mid :2 \\
+	a = b+\frac{1}{2}\not\in\mathbb{Z}\quad\lightning
+\end{split}
+\end{equation*}
+
+\subsection{Exercise 3}
+\begin{enumerate}
+\item Die Aussage stimmt nicht:
+
+Sei $x:=33\rightarrow y=13$
+
+$T(x) = \lbrace 11,3,33,1\rbrace$
+
+$T(y) = \lbrace 1,13\rbrace$
+
+$T(20) = \lbrace 1,2,4,5,10\rbrace$
+
+$gT(x,y) = \lbrace 1,13\rbrace \nsupseteq T(20)\quad\lightning$
+
+\item Sei $t\cdot a =x,\quad t\cdot b=20$, then:
+\begin{align*}
+y&=x-20 \qquad\mid x=t\cdot a,20=t\cdot b	\\
+y&=t\cdot a-t\cdot b							\\
+y&=t(a-b)									\\
+\frac{y}{t}&=(a-b)\qquad
+\end{align*}
+
+\item Sei $P(n)$ die Menge der Primzahlfaktoren von n
+
+$P(660)=\lbrace 2,2,3,5,11\rbrace$
+
+$P(470)=\lbrace 2,5,47\rbrace$
+
+$ggT(660,470) = 10,\quad T(660,470)=\lbrace 1,2,5,10\rbrace$
+\end{enumerate}
+
+\subsection{Exercise 4}
+\begin{enumerate}
+	\item Gegeben: $A=\lbrace\epsilon,10,bc,100\rbrace$,$B=\lbrace 10,bc,2,3,\delta\rbrace$, $C=\lbrace a,2,3,10\rbrace$
+	
+	$D=B\cup(A\cap C)=B\cup\lbrace 10\rbrace=B$
+	
+	$E=D\cap(A\cup B) = B$
+	
+	$F=E\cup(A\setminus C)=B\cup\lbrace \epsilon,bc,100\rbrace = \lbrace 10,bc,2,3,\delta,\epsilon,100 \rbrace$
+	
+	$G=F\cap(A\cup C) = F\cap\lbrace \epsilon,10,bc,100,\alpha,2,3\rbrace = \lbrace 10,\epsilon,bc,100,2,3\rbrace$
+	\item $\mid P(\lbrace\emptyset,\lbrace\emptyset\rbrace\rbrace)\mid = \mid\lbrace\emptyset ,\lbrace\emptyset\rbrace ,\lbrace\lbrace\emptyset\rbrace\rbrace ,\lbrace\emptyset ,\lbrace\emptyset\rbrace\rbrace\rbrace\mid = 4$
+\end{enumerate}
+\end{document}
